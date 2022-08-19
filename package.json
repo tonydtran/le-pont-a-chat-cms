@@ -1,0 +1,31 @@
+{
+  "name": "le-pont-a-chat",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@strapi/plugin-i18n": "^4.3.4",
+    "@strapi/plugin-users-permissions": "^4.3.4",
+    "@strapi/strapi": "^4.3.4",
+    "sqlite3": "^5.0.11",
+    "uuid": "^8.3.2"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "4610aa60-aaff-468a-b8ad-ffa5e5f9ed27"
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
