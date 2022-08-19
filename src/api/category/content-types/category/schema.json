@@ -25,14 +25,14 @@
       "type": "string",
       "required": true
     },
-    "path": {
+    "slug": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
       "type": "string",
-      "required": true
+      "required": false
     },
     "uuid": {
       "pluginOptions": {
