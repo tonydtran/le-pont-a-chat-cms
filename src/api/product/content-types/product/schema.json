@@ -43,14 +43,6 @@
       "min": 0,
       "required": true
     },
-    "description": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "text"
-    },
     "assets": {
       "type": "media",
       "multiple": true,
@@ -83,6 +75,14 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::product-option.product-option"
+    },
+    "description": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
     }
   }
 }
