@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "products",
+  "collectionName": "option_values",
   "info": {
-    "singularName": "product",
-    "pluralName": "products",
-    "displayName": "Product",
+    "singularName": "option-value",
+    "pluralName": "option-values",
+    "displayName": "Option Value",
     "description": ""
   },
   "options": {
@@ -24,10 +24,19 @@
       },
       "type": "string"
     },
-    "name": {
+    "label": {
       "pluginOptions": {
         "i18n": {
           "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    },
+    "value": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
         }
       },
       "type": "string",
@@ -41,48 +50,31 @@
       },
       "type": "decimal",
       "min": 0,
+      "default": 0,
       "required": true
     },
-    "description": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "text"
-    },
-    "assets": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "videos"
-      ],
+    "private_type": {
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
-      }
+      },
+      "type": "enumeration",
+      "enum": [
+        "[corde] matière",
+        "[corde] longueur"
+      ],
+      "private": true,
+      "required": true
     },
-    "slug": {
+    "private_description": {
       "pluginOptions": {
         "i18n": {
-          "localized": true
+          "localized": false
         }
       },
       "type": "string",
-      "required": false
-    },
-    "categories": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::category.category"
-    },
-    "product_options": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::product-option.product-option"
+      "private": true
     }
   }
 }
