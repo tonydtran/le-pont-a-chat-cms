@@ -34,7 +34,7 @@
       "type": "string",
       "required": false
     },
-    "displayOrder": {
+    "display_order": {
       "pluginOptions": {
         "i18n": {
           "localized": false

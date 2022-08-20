@@ -48,7 +48,7 @@
       "relation": "oneToOne",
       "target": "api::category.category"
     },
-    "displayOrder": {
+    "display_order": {
       "pluginOptions": {
         "i18n": {
           "localized": false
