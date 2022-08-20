@@ -5,7 +5,6 @@ module.exports = [
   'strapi::poweredBy',
   'strapi::logger',
   'strapi::query',
-  'strapi::body',
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
@@ -16,4 +15,10 @@ module.exports = [
       gzip: true
     },
   },
+  {
+    name: 'strapi::body',
+    config: {
+      jsonLimit: '10mb',
+    },
+  }
 ];
