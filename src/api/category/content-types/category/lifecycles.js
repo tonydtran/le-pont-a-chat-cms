@@ -7,4 +7,9 @@ module.exports = {
     data.params.data.uuid = uuid();
     data.params.data.slug = `/${data.params.data.name.toLowerCase().replace(/ /g, '-')}`;
   },
+  beforeUpdate: async (data) => {
+    if (data.params.data.name) {
+      data.params.data.slug = `/${data.params.data.name.toLowerCase().replace(/ /g, '-')}`;
+    }
+  }
 };
