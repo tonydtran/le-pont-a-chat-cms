@@ -9083,6 +9083,11 @@ repeat-string@^1.6.1:
   resolved "https://registry.yarnpkg.com/repeat-string/-/repeat-string-1.6.1.tgz#8dcae470e1c88abc2d600fff4a776286da75e637"
   integrity sha1-jcrkcOHIirwtYA//Sndihtp15jc=
 
+replace-special-characters@^1.2.6:
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/replace-special-characters/-/replace-special-characters-1.2.6.tgz#33b0941703b17de532bb79e69d894ee5ed57b618"
+  integrity sha512-6Gyq6LSoAsBw4edGPUP1OthVu5GhqPuejy+rjA/hxIs6lhNCT4XnL7c22ZsUZqv+RsDIbBiYfO8bRoMD/H9WlQ==
+
 request-compose@^2.1.4:
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/request-compose/-/request-compose-2.1.4.tgz#d427d614d31c0300e5893cbeaf86e51da1dff445"
