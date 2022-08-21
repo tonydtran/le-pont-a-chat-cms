@@ -8,6 +8,7 @@ module.exports = [
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
+  'strapi::body',
   {
     name: 'strapi::compression',
     config: {
@@ -15,10 +16,4 @@ module.exports = [
       gzip: true
     },
   },
-  {
-    name: 'strapi::body',
-    config: {
-      jsonLimit: '10mb',
-    },
-  }
 ];
