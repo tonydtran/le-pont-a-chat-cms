@@ -1,0 +1,152 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::menu-item.menu-item",
+  "value": {
+    "uid": "api::menu-item.menu-item",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "name",
+      "defaultSortBy": "name",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "Nom de la section du menu",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Nom",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "slug": {
+        "edit": {
+          "label": "slug",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "slug",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "display_order": {
+        "edit": {
+          "label": "Ordre d'affichage dans le menu",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Ordre d'affichage",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "subMenu": {
+        "edit": {
+          "label": "Sous menu",
+          "description": "Indique le type de sous menu s'il y en a un",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Sous-menu",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "uuid": {
+        "edit": {
+          "label": "uuid",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "uuid",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "name",
+            "size": 6
+          },
+          {
+            "name": "display_order",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "subMenu",
+            "size": 6
+          }
+        ]
+      ],
+      "editRelations": [],
+      "list": [
+        "name",
+        "display_order",
+        "subMenu"
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

@@ -1,0 +1,168 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::category.category",
+  "value": {
+    "uid": "api::category.category",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 20,
+      "mainField": "name",
+      "defaultSortBy": "name",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "Nom de la catégorie",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Nom",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "slug": {
+        "edit": {
+          "label": "slug",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "slug",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "uuid": {
+        "edit": {
+          "label": "uuid",
+          "description": "Identifiant unique",
+          "placeholder": "Auto généré à la création du produit",
+          "visible": true,
+          "editable": false
+        },
+        "list": {
+          "label": "uuid",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "parent": {
+        "edit": {
+          "label": "Catégorie \"mère\"",
+          "description": "La catégorie où appartient la catégorie actuelle",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "Catégorie \"mère\"",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "display_order": {
+        "edit": {
+          "label": "Ordre d'affichage",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Ordre d'affichage",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "children": {
+        "edit": {
+          "label": "Sous-catégorie(s)",
+          "description": "La ou les sous catégories de la catégorie actuelle",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "Sous-catégorie(s)",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "name",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "display_order",
+            "size": 6
+          }
+        ]
+      ],
+      "editRelations": [
+        "parent",
+        "children"
+      ],
+      "list": [
+        "name",
+        "display_order",
+        "parent",
+        "children"
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

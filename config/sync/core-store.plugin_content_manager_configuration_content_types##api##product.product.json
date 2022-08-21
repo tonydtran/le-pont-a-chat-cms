@@ -1,0 +1,227 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::product.product",
+  "value": {
+    "uid": "api::product.product",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "name",
+      "defaultSortBy": "name",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "uuid": {
+        "edit": {
+          "label": "uuid",
+          "description": "Identifiant unique",
+          "placeholder": "Auto généré à la création du produit",
+          "visible": true,
+          "editable": false
+        },
+        "list": {
+          "label": "uuid",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "Nom du produit",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Nom",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "price": {
+        "edit": {
+          "label": "Prix (hors remise)",
+          "description": "Nombre décimal avec une virgule et non un point (la virgule se transforme en point après l'enregistrement)",
+          "placeholder": "9,99",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Prix (hors remise)",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "assets": {
+        "edit": {
+          "label": "Media",
+          "description": "Photos et vidéos du produit",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "assets",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "slug": {
+        "edit": {
+          "label": "slug",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "slug",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "categories": {
+        "edit": {
+          "label": "Catégories",
+          "description": "Catégories (principale et éventuellement sous catégorie)",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "Categories",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "product_options": {
+        "edit": {
+          "label": "Options",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "description"
+        },
+        "list": {
+          "label": "Options",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "description": {
+        "edit": {
+          "label": "Description du produit",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "description",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "discount": {
+        "edit": {
+          "label": "Remise (en %)",
+          "description": "Remise appliquée",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Remise (en %)",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "name",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "description",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "price",
+            "size": 6
+          },
+          {
+            "name": "discount",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "assets",
+            "size": 12
+          }
+        ]
+      ],
+      "editRelations": [
+        "categories",
+        "product_options"
+      ],
+      "list": [
+        "name",
+        "categories",
+        "product_options",
+        "price",
+        "discount"
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

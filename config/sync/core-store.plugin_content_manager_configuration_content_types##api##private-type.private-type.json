@@ -1,0 +1,132 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::private-type.private-type",
+  "value": {
+    "uid": "api::private-type.private-type",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "description",
+      "defaultSortBy": "option_category",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "option_category": {
+        "edit": {
+          "label": "Catégorie de l'option",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Catégorie d'option",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "option_type": {
+        "edit": {
+          "label": "Type de l'option",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Type d'option",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "description": {
+        "edit": {
+          "label": "description",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Description",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "uuid": {
+        "edit": {
+          "label": "uuid",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "uuid",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "option_category",
+            "size": 6
+          },
+          {
+            "name": "option_type",
+            "size": 6
+          }
+        ]
+      ],
+      "editRelations": [],
+      "list": [
+        "option_category",
+        "option_type",
+        "description"
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

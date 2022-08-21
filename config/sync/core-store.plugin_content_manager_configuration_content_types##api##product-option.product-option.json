@@ -1,0 +1,154 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::product-option.product-option",
+  "value": {
+    "uid": "api::product-option.product-option",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "label",
+      "defaultSortBy": "uuid",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "uuid": {
+        "edit": {
+          "label": "uuid",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "uuid",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "label": {
+        "edit": {
+          "label": "Intitulé",
+          "description": "Tel qu'il sera affiché sur le site",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Intitulé",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "description": {
+        "edit": {
+          "label": "Description",
+          "description": "S'il y en a une, sera affichée en-dessous de l'intitulé",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "description",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "option_values": {
+        "edit": {
+          "label": "Valeurs",
+          "description": "Les différentes valeurs possibles de l'option",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "private_description"
+        },
+        "list": {
+          "label": "Valeurs",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "private_type": {
+        "edit": {
+          "label": "Type de l'option",
+          "description": "Pour mieux s'y retrouver",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "description"
+        },
+        "list": {
+          "label": "Type d'option",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "label",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "description",
+            "size": 6
+          }
+        ]
+      ],
+      "editRelations": [
+        "option_values",
+        "private_type"
+      ],
+      "list": [
+        "label",
+        "description",
+        "private_type",
+        "option_values"
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}
