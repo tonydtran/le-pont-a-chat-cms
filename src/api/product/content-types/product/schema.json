@@ -83,6 +83,17 @@
         }
       },
       "type": "richtext"
+    },
+    "discount": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "decimal",
+      "min": 0,
+      "default": 0,
+      "max": 100
     }
   }
 }
