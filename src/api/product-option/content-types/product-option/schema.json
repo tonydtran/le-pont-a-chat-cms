@@ -40,23 +40,16 @@
       },
       "type": "string"
     },
-    "private_type": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "type": "enumeration",
-      "enum": [
-        "[corde] matière",
-        "[corde] longueur"
-      ],
-      "private": true
-    },
     "option_values": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::option-value.option-value"
+    },
+    "private_type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::private-type.private-type",
+      "private": true
     }
   }
 }

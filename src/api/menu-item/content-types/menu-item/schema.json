@@ -50,6 +50,14 @@
         }
       },
       "type": "string"
+    },
+    "uuid": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string"
     }
   }
 }

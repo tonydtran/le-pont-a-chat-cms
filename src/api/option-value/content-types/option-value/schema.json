@@ -53,20 +53,6 @@
       "default": 0,
       "required": true
     },
-    "private_type": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
-      "type": "enumeration",
-      "enum": [
-        "[corde] matière",
-        "[corde] longueur"
-      ],
-      "private": true,
-      "required": true
-    },
     "private_description": {
       "pluginOptions": {
         "i18n": {
@@ -86,6 +72,12 @@
       "min": 0,
       "max": 100,
       "default": 0
+    },
+    "private_type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::private-type.private-type",
+      "private": true
     }
   }
 }

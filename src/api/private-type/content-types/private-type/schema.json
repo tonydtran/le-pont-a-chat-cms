@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "private_types",
+  "info": {
+    "singularName": "private-type",
+    "pluralName": "private-types",
+    "displayName": "Private Type",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "option_category": {
+      "type": "string",
+      "required": true,
+      "private": true
+    },
+    "option_type": {
+      "type": "string",
+      "required": true,
+      "private": true
+    },
+    "description": {
+      "type": "string",
+      "private": true
+    },
+    "uuid": {
+      "type": "string",
+      "private": true
+    }
+  }
+}
