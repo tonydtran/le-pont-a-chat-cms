@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "discount_coupons",
+  "info": {
+    "singularName": "discount-coupon",
+    "pluralName": "discount-coupons",
+    "displayName": "Discount Coupon",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uuid": {
+      "type": "string",
+      "private": true,
+      "unique": true
+    },
+    "code": {
+      "type": "string",
+      "private": true,
+      "unique": true
+    },
+    "discount": {
+      "type": "decimal",
+      "required": true,
+      "private": true,
+      "min": 0,
+      "default": 10
+    },
+    "used": {
+      "type": "boolean",
+      "default": false,
+      "required": true,
+      "private": true
+    },
+    "expiration_date": {
+      "type": "date",
+      "private": true
+    },
+    "comment": {
+      "type": "string",
+      "private": true
+    },
+    "max_usage": {
+      "type": "integer",
+      "private": true,
+      "min": 1,
+      "default": 1
+    },
+    "usage_count": {
+      "type": "integer",
+      "min": 0,
+      "default": 0,
+      "private": true
+    }
+  }
+}

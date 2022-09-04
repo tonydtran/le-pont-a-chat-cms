@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uuid": {
+      "type": "string"
+    },
+    "firstname": {
+      "type": "string",
+      "required": true
+    },
+    "lastname": {
+      "type": "string",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "awaiting",
+        "in_progress",
+        "ready_for_shipping",
+        "done",
+        "stalled",
+        "cancelled"
+      ],
+      "required": true,
+      "default": "awaiting"
+    },
+    "items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order-item.order-item"
+    },
+    "shipping_address": {
+      "type": "component",
+      "repeatable": false,
+      "component": "address.customer-address",
+      "required": true
+    },
+    "billing_address": {
+      "type": "component",
+      "repeatable": false,
+      "component": "address.customer-address",
+      "required": false
+    },
+    "total_price": {
+      "type": "decimal",
+      "min": 0,
+      "default": 0
+    },
+    "coupon": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::discount-coupon.discount-coupon"
+    },
+    "reference": {
+      "type": "string",
+      "unique": true
+    }
+  }
+}

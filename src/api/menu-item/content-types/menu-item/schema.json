@@ -43,7 +43,7 @@
       "type": "integer",
       "required": false
     },
-    "subMenu": {
+    "sub_nav_type": {
       "pluginOptions": {
         "i18n": {
           "localized": false
