@@ -2751,6 +2751,19 @@
           "default": 0,
           "max": 100
         },
+        "thumbnail": {
+          "allowedTypes": [
+            "images"
+          ],
+          "type": "media",
+          "multiple": false,
+          "pluginOptions": {
+            "i18n": {
+              "localized": false
+            }
+          },
+          "required": true
+        },
         "createdAt": {
           "type": "datetime"
         },
@@ -2895,6 +2908,19 @@
             "min": 0,
             "default": 0,
             "max": 100
+          },
+          "thumbnail": {
+            "allowedTypes": [
+              "images"
+            ],
+            "type": "media",
+            "multiple": false,
+            "pluginOptions": {
+              "i18n": {
+                "localized": false
+              }
+            },
+            "required": true
           }
         },
         "kind": "collectionType"

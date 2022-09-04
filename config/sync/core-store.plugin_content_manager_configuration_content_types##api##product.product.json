@@ -148,6 +148,20 @@
           "sortable": true
         }
       },
+      "thumbnail": {
+        "edit": {
+          "label": "Aperçu",
+          "description": "Image principale du produit",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "thumbnail",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -182,6 +196,10 @@
         [
           {
             "name": "name",
+            "size": 6
+          },
+          {
+            "name": "thumbnail",
             "size": 6
           }
         ],

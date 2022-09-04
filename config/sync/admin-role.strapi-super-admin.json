@@ -588,7 +588,8 @@
           "categories",
           "product_options",
           "description",
-          "discount"
+          "discount",
+          "thumbnail"
         ],
         "locales": [
           "fr",
@@ -632,7 +633,8 @@
           "categories",
           "product_options",
           "description",
-          "discount"
+          "discount",
+          "thumbnail"
         ],
         "locales": [
           "fr",
@@ -654,7 +656,8 @@
           "categories",
           "product_options",
           "description",
-          "discount"
+          "discount",
+          "thumbnail"
         ],
         "locales": [
           "fr",
