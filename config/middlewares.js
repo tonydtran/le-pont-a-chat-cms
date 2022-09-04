@@ -1,6 +1,19 @@
 module.exports = [
+  {
+    name: 'strapi::security',
+    config: {
+      contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+          'connect-src': ["'self'", 'https:', 'http:'],
+          'img-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com', 'http:'],
+          'media-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com', 'http:'],
+          upgradeInsecureRequests: null,
+        },
+      },
+    },
+  },
   'strapi::errors',
-  'strapi::security',
   'strapi::cors',
   'strapi::poweredBy',
   'strapi::logger',
