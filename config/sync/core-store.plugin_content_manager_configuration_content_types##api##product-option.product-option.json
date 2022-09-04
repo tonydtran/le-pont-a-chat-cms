@@ -38,7 +38,7 @@
         "edit": {
           "label": "Intitulé",
           "description": "Tel qu'il sera affiché sur le site",
-          "placeholder": "",
+          "placeholder": "Ex : Corde",
           "visible": true,
           "editable": true
         },
@@ -52,7 +52,7 @@
         "edit": {
           "label": "Description",
           "description": "S'il y en a une, sera affichée en-dessous de l'intitulé",
-          "placeholder": "",
+          "placeholder": "Ex : Matière de la corde",
           "visible": true,
           "editable": true
         },

@@ -1,0 +1,236 @@
+{
+  "key": "plugin_content_manager_configuration_components::address.customer-address",
+  "value": {
+    "uid": "address.customer-address",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "address_name",
+      "defaultSortBy": "address_name",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "address_name": {
+        "edit": {
+          "label": "Intitulé de l'adresse",
+          "description": "Ex : Domicile, bureau, etc",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "address_name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "firstname": {
+        "edit": {
+          "label": "Prénom",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "firstname",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "lastname": {
+        "edit": {
+          "label": "Nom",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "lastname",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "address_line_1": {
+        "edit": {
+          "label": "Adresse ligne 1",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "address_line_1",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "address_line_2": {
+        "edit": {
+          "label": "Adresse ligne 2",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "address_line_2",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "city": {
+        "edit": {
+          "label": "Ville",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "city",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "zip_code": {
+        "edit": {
+          "label": "Code postal",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "zip_code",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "region_state_province": {
+        "edit": {
+          "label": "Région / État / Province",
+          "description": "Peut-être nécessaire pour certains pays",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "region_state_province",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "country": {
+        "edit": {
+          "label": "Pays",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "country",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "other": {
+        "edit": {
+          "label": "Autre",
+          "description": "Commentaires pouvant contenir des instructions complémentaires pour la livraison (codes, étage, etc)",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "other",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "address_name",
+        "firstname",
+        "lastname"
+      ],
+      "edit": [
+        [
+          {
+            "name": "address_name",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "lastname",
+            "size": 6
+          },
+          {
+            "name": "firstname",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "address_line_1",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "address_line_2",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "region_state_province",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "city",
+            "size": 6
+          },
+          {
+            "name": "zip_code",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "country",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "other",
+            "size": 6
+          }
+        ]
+      ],
+      "editRelations": []
+    },
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

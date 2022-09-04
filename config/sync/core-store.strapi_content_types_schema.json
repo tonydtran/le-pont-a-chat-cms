@@ -1716,6 +1716,164 @@
       "actions": {},
       "lifecycles": {}
     },
+    "api::discount-coupon.discount-coupon": {
+      "kind": "collectionType",
+      "collectionName": "discount_coupons",
+      "info": {
+        "singularName": "discount-coupon",
+        "pluralName": "discount-coupons",
+        "displayName": "Discount Coupon",
+        "description": ""
+      },
+      "options": {
+        "draftAndPublish": true
+      },
+      "pluginOptions": {},
+      "attributes": {
+        "uuid": {
+          "type": "string",
+          "private": true,
+          "unique": true
+        },
+        "code": {
+          "type": "string",
+          "private": true,
+          "unique": true
+        },
+        "discount": {
+          "type": "decimal",
+          "required": true,
+          "private": true,
+          "min": 0,
+          "default": 10
+        },
+        "used": {
+          "type": "boolean",
+          "default": false,
+          "required": true,
+          "private": true
+        },
+        "expiration_date": {
+          "type": "date",
+          "private": true
+        },
+        "comment": {
+          "type": "string",
+          "private": true
+        },
+        "max_usage": {
+          "type": "integer",
+          "private": true,
+          "min": 1,
+          "default": 1
+        },
+        "usage_count": {
+          "type": "integer",
+          "min": 0,
+          "default": 0,
+          "private": true
+        },
+        "createdAt": {
+          "type": "datetime"
+        },
+        "updatedAt": {
+          "type": "datetime"
+        },
+        "publishedAt": {
+          "type": "datetime",
+          "configurable": false,
+          "writable": true,
+          "visible": false
+        },
+        "createdBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        },
+        "updatedBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        }
+      },
+      "__schema__": {
+        "collectionName": "discount_coupons",
+        "info": {
+          "singularName": "discount-coupon",
+          "pluralName": "discount-coupons",
+          "displayName": "Discount Coupon",
+          "description": ""
+        },
+        "options": {
+          "draftAndPublish": true
+        },
+        "pluginOptions": {},
+        "attributes": {
+          "uuid": {
+            "type": "string",
+            "private": true,
+            "unique": true
+          },
+          "code": {
+            "type": "string",
+            "private": true,
+            "unique": true
+          },
+          "discount": {
+            "type": "decimal",
+            "required": true,
+            "private": true,
+            "min": 0,
+            "default": 10
+          },
+          "used": {
+            "type": "boolean",
+            "default": false,
+            "required": true,
+            "private": true
+          },
+          "expiration_date": {
+            "type": "date",
+            "private": true
+          },
+          "comment": {
+            "type": "string",
+            "private": true
+          },
+          "max_usage": {
+            "type": "integer",
+            "private": true,
+            "min": 1,
+            "default": 1
+          },
+          "usage_count": {
+            "type": "integer",
+            "min": 0,
+            "default": 0,
+            "private": true
+          }
+        },
+        "kind": "collectionType"
+      },
+      "modelType": "contentType",
+      "modelName": "discount-coupon",
+      "connection": "default",
+      "uid": "api::discount-coupon.discount-coupon",
+      "apiName": "discount-coupon",
+      "globalId": "DiscountCoupon",
+      "actions": {},
+      "lifecycles": {}
+    },
     "api::menu-item.menu-item": {
       "kind": "collectionType",
       "collectionName": "menu_items",
@@ -1761,7 +1919,7 @@
           "type": "integer",
           "required": false
         },
-        "subMenu": {
+        "sub_nav_type": {
           "pluginOptions": {
             "i18n": {
               "localized": false
@@ -1870,7 +2028,7 @@
             "type": "integer",
             "required": false
           },
-          "subMenu": {
+          "sub_nav_type": {
             "pluginOptions": {
               "i18n": {
                 "localized": false
@@ -2117,6 +2275,280 @@
       "uid": "api::option-value.option-value",
       "apiName": "option-value",
       "globalId": "OptionValue",
+      "actions": {},
+      "lifecycles": {}
+    },
+    "api::order.order": {
+      "kind": "collectionType",
+      "collectionName": "orders",
+      "info": {
+        "singularName": "order",
+        "pluralName": "orders",
+        "displayName": "Order",
+        "description": ""
+      },
+      "options": {
+        "draftAndPublish": false
+      },
+      "pluginOptions": {},
+      "attributes": {
+        "uuid": {
+          "type": "string"
+        },
+        "firstname": {
+          "type": "string",
+          "required": true
+        },
+        "lastname": {
+          "type": "string",
+          "required": true
+        },
+        "status": {
+          "type": "enumeration",
+          "enum": [
+            "awaiting",
+            "in_progress",
+            "ready_for_shipping",
+            "done",
+            "stalled",
+            "cancelled"
+          ],
+          "required": true,
+          "default": "awaiting"
+        },
+        "items": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::order-item.order-item"
+        },
+        "shipping_address": {
+          "type": "component",
+          "repeatable": false,
+          "component": "address.customer-address",
+          "required": true
+        },
+        "billing_address": {
+          "type": "component",
+          "repeatable": false,
+          "component": "address.customer-address",
+          "required": false
+        },
+        "total_price": {
+          "type": "decimal",
+          "min": 0,
+          "default": 0
+        },
+        "coupon": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "api::discount-coupon.discount-coupon"
+        },
+        "reference": {
+          "type": "string",
+          "unique": true
+        },
+        "createdAt": {
+          "type": "datetime"
+        },
+        "updatedAt": {
+          "type": "datetime"
+        },
+        "createdBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        },
+        "updatedBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        }
+      },
+      "__schema__": {
+        "collectionName": "orders",
+        "info": {
+          "singularName": "order",
+          "pluralName": "orders",
+          "displayName": "Order",
+          "description": ""
+        },
+        "options": {
+          "draftAndPublish": false
+        },
+        "pluginOptions": {},
+        "attributes": {
+          "uuid": {
+            "type": "string"
+          },
+          "firstname": {
+            "type": "string",
+            "required": true
+          },
+          "lastname": {
+            "type": "string",
+            "required": true
+          },
+          "status": {
+            "type": "enumeration",
+            "enum": [
+              "awaiting",
+              "in_progress",
+              "ready_for_shipping",
+              "done",
+              "stalled",
+              "cancelled"
+            ],
+            "required": true,
+            "default": "awaiting"
+          },
+          "items": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::order-item.order-item"
+          },
+          "shipping_address": {
+            "type": "component",
+            "repeatable": false,
+            "component": "address.customer-address",
+            "required": true
+          },
+          "billing_address": {
+            "type": "component",
+            "repeatable": false,
+            "component": "address.customer-address",
+            "required": false
+          },
+          "total_price": {
+            "type": "decimal",
+            "min": 0,
+            "default": 0
+          },
+          "coupon": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "api::discount-coupon.discount-coupon"
+          },
+          "reference": {
+            "type": "string",
+            "unique": true
+          }
+        },
+        "kind": "collectionType"
+      },
+      "modelType": "contentType",
+      "modelName": "order",
+      "connection": "default",
+      "uid": "api::order.order",
+      "apiName": "order",
+      "globalId": "Order",
+      "actions": {},
+      "lifecycles": {}
+    },
+    "api::order-item.order-item": {
+      "kind": "collectionType",
+      "collectionName": "order_items",
+      "info": {
+        "singularName": "order-item",
+        "pluralName": "order-items",
+        "displayName": "Order Item",
+        "description": ""
+      },
+      "options": {
+        "draftAndPublish": false
+      },
+      "pluginOptions": {},
+      "attributes": {
+        "uuid": {
+          "type": "string"
+        },
+        "product": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "api::product.product"
+        },
+        "options": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::option-value.option-value"
+        },
+        "total_price": {
+          "type": "decimal"
+        },
+        "createdAt": {
+          "type": "datetime"
+        },
+        "updatedAt": {
+          "type": "datetime"
+        },
+        "createdBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        },
+        "updatedBy": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "admin::user",
+          "configurable": false,
+          "writable": false,
+          "visible": false,
+          "useJoinTable": false,
+          "private": true
+        }
+      },
+      "__schema__": {
+        "collectionName": "order_items",
+        "info": {
+          "singularName": "order-item",
+          "pluralName": "order-items",
+          "displayName": "Order Item",
+          "description": ""
+        },
+        "options": {
+          "draftAndPublish": false
+        },
+        "pluginOptions": {},
+        "attributes": {
+          "uuid": {
+            "type": "string"
+          },
+          "product": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "api::product.product"
+          },
+          "options": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::option-value.option-value"
+          },
+          "total_price": {
+            "type": "decimal"
+          }
+        },
+        "kind": "collectionType"
+      },
+      "modelType": "contentType",
+      "modelName": "order-item",
+      "connection": "default",
+      "uid": "api::order-item.order-item",
+      "apiName": "order-item",
+      "globalId": "OrderItem",
       "actions": {},
       "lifecycles": {}
     },

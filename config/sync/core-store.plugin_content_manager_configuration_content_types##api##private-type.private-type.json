@@ -24,7 +24,7 @@
         "edit": {
           "label": "Catégorie de l'option",
           "description": "",
-          "placeholder": "",
+          "placeholder": "Ex : corde",
           "visible": true,
           "editable": true
         },
@@ -38,7 +38,7 @@
         "edit": {
           "label": "Type de l'option",
           "description": "",
-          "placeholder": "",
+          "placeholder": "Ex : longueur",
           "visible": true,
           "editable": true
         },

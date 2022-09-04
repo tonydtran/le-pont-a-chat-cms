@@ -1,14 +1,14 @@
 {
-  "key": "plugin_content_manager_configuration_content_types::api::option-value.option-value",
+  "key": "plugin_content_manager_configuration_content_types::api::order.order",
   "value": {
-    "uid": "api::option-value.option-value",
+    "uid": "api::order.order",
     "settings": {
       "bulkable": true,
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "private_description",
-      "defaultSortBy": "uuid",
+      "mainField": "reference",
+      "defaultSortBy": "lastname",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -34,87 +34,130 @@
           "sortable": true
         }
       },
-      "label": {
+      "firstname": {
         "edit": {
-          "label": "Intitulé",
-          "description": "Tel qu'il sera affiché sur le site",
-          "placeholder": "Ex: 180cm",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Intitulé",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "value": {
-        "edit": {
-          "label": "Valeur technique",
-          "description": "Valeur servant à la création de la commande",
-          "placeholder": "Ex : 180",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Valeur technique",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "price": {
-        "edit": {
-          "label": "Prix (hors remise)",
-          "description": "Coût supplémentaire si l'option est sélectionnée",
-          "placeholder": "Ex : 50",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Prix (hors remise)",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "private_description": {
-        "edit": {
-          "label": "private_description",
+          "label": "Prénom",
           "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Prénom",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "lastname": {
+        "edit": {
+          "label": "Nom",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Nom",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "status": {
+        "edit": {
+          "label": "Status de la commande",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Status de la commande",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "items": {
+        "edit": {
+          "label": "Items",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "id"
+        },
+        "list": {
+          "label": "items",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "shipping_address": {
+        "edit": {
+          "label": "Adresse de livraison",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Adresse de livraison",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "billing_address": {
+        "edit": {
+          "label": "Adresse de facturation",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "billing_address",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "total_price": {
+        "edit": {
+          "label": "Total de la commande",
+          "description": "Après remise(s) appliquée(s)",
           "placeholder": "",
           "visible": true,
           "editable": false
         },
         "list": {
-          "label": "Description",
+          "label": "total_price",
           "searchable": true,
           "sortable": true
         }
       },
-      "discount": {
+      "coupon": {
         "edit": {
-          "label": "Remise (en %)",
-          "description": "Remise appliquée sur le coût de l'option",
-          "placeholder": "Ex : 10 (ce qui fera -10% sur le cout de cette option)",
+          "label": "Coupon de réduction",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "code"
+        },
+        "list": {
+          "label": "coupon",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "reference": {
+        "edit": {
+          "label": "reference",
+          "description": "",
+          "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "Remise (en %)",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "private_type": {
-        "edit": {
-          "label": "Type de l'option",
-          "description": "Pour mieux s'y retrouver",
-          "placeholder": "",
-          "visible": true,
-          "editable": true,
-          "mainField": "description"
-        },
-        "list": {
-          "label": "Type",
+          "label": "reference",
           "searchable": true,
           "sortable": true
         }
@@ -152,33 +195,46 @@
       "edit": [
         [
           {
-            "name": "label",
+            "name": "lastname",
             "size": 6
           },
           {
-            "name": "value",
+            "name": "firstname",
             "size": 6
           }
         ],
         [
           {
-            "name": "price",
+            "name": "status",
             "size": 6
           },
           {
-            "name": "discount",
-            "size": 6
+            "name": "total_price",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "shipping_address",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "billing_address",
+            "size": 12
           }
         ]
       ],
       "editRelations": [
-        "private_type"
+        "items",
+        "coupon"
       ],
       "list": [
-        "private_type",
-        "label",
-        "price",
-        "discount"
+        "lastname",
+        "firstname",
+        "status",
+        "shipping_address"
       ]
     }
   },

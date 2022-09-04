@@ -1,14 +1,14 @@
 {
-  "key": "plugin_content_manager_configuration_content_types::api::menu-item.menu-item",
+  "key": "plugin_content_manager_configuration_content_types::api::order-item.order-item",
   "value": {
-    "uid": "api::menu-item.menu-item",
+    "uid": "api::order-item.order-item",
     "settings": {
       "bulkable": true,
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "name",
-      "defaultSortBy": "name",
+      "mainField": "id",
+      "defaultSortBy": "id",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -16,62 +16,6 @@
         "edit": {},
         "list": {
           "label": "id",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "name": {
-        "edit": {
-          "label": "Nom de la section du menu",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Nom",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "slug": {
-        "edit": {
-          "label": "slug",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "slug",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "display_order": {
-        "edit": {
-          "label": "Ordre d'affichage dans le menu",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Ordre d'affichage",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "sub_nav_type": {
-        "edit": {
-          "label": "Type de sous menu",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "sub_nav_type",
           "searchable": true,
           "sortable": true
         }
@@ -86,6 +30,50 @@
         },
         "list": {
           "label": "uuid",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "product": {
+        "edit": {
+          "label": "Produit",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "Produit",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "options": {
+        "edit": {
+          "label": "Options",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "private_description"
+        },
+        "list": {
+          "label": "Options",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "total_price": {
+        "edit": {
+          "label": "Prix total",
+          "description": "Prend en compte la valeur initiale du produit et les options",
+          "placeholder": "",
+          "visible": true,
+          "editable": false
+        },
+        "list": {
+          "label": "total_price",
           "searchable": true,
           "sortable": true
         }
@@ -123,26 +111,20 @@
       "edit": [
         [
           {
-            "name": "name",
-            "size": 6
-          },
-          {
-            "name": "display_order",
-            "size": 6
-          }
-        ],
-        [
-          {
-            "name": "sub_nav_type",
-            "size": 6
+            "name": "total_price",
+            "size": 4
           }
         ]
       ],
-      "editRelations": [],
+      "editRelations": [
+        "product",
+        "options"
+      ],
       "list": [
-        "name",
-        "display_order",
-        "sub_nav_type"
+        "id",
+        "product",
+        "options",
+        "total_price"
       ]
     }
   },

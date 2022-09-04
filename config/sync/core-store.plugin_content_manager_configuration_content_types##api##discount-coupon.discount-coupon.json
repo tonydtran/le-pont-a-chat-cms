@@ -1,14 +1,14 @@
 {
-  "key": "plugin_content_manager_configuration_content_types::api::option-value.option-value",
+  "key": "plugin_content_manager_configuration_content_types::api::discount-coupon.discount-coupon",
   "value": {
-    "uid": "api::option-value.option-value",
+    "uid": "api::discount-coupon.discount-coupon",
     "settings": {
       "bulkable": true,
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "private_description",
-      "defaultSortBy": "uuid",
+      "mainField": "code",
+      "defaultSortBy": "code",
       "defaultSortOrder": "ASC"
     },
     "metadatas": {
@@ -34,58 +34,16 @@
           "sortable": true
         }
       },
-      "label": {
+      "code": {
         "edit": {
-          "label": "Intitulé",
-          "description": "Tel qu'il sera affiché sur le site",
-          "placeholder": "Ex: 180cm",
+          "label": "Code",
+          "description": "NE PAS EDITER LES CHAMPS UNE FOIS LE CODE ENREGISTRÉ !!!",
+          "placeholder": "Si le champ est laissé vide, un code sera automatiquement généré",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "Intitulé",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "value": {
-        "edit": {
-          "label": "Valeur technique",
-          "description": "Valeur servant à la création de la commande",
-          "placeholder": "Ex : 180",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Valeur technique",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "price": {
-        "edit": {
-          "label": "Prix (hors remise)",
-          "description": "Coût supplémentaire si l'option est sélectionnée",
-          "placeholder": "Ex : 50",
-          "visible": true,
-          "editable": true
-        },
-        "list": {
-          "label": "Prix (hors remise)",
-          "searchable": true,
-          "sortable": true
-        }
-      },
-      "private_description": {
-        "edit": {
-          "label": "private_description",
-          "description": "",
-          "placeholder": "",
-          "visible": true,
-          "editable": false
-        },
-        "list": {
-          "label": "Description",
+          "label": "Code",
           "searchable": true,
           "sortable": true
         }
@@ -93,28 +51,83 @@
       "discount": {
         "edit": {
           "label": "Remise (en %)",
-          "description": "Remise appliquée sur le coût de l'option",
-          "placeholder": "Ex : 10 (ce qui fera -10% sur le cout de cette option)",
+          "description": "Sur l'ensemble de la commande",
+          "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "Remise (en %)",
+          "label": "discount",
           "searchable": true,
           "sortable": true
         }
       },
-      "private_type": {
+      "used": {
         "edit": {
-          "label": "Type de l'option",
-          "description": "Pour mieux s'y retrouver",
+          "label": "Usé",
+          "description": "Si le coupon a déjà servi ou pas",
           "placeholder": "",
           "visible": true,
-          "editable": true,
-          "mainField": "description"
+          "editable": false
         },
         "list": {
-          "label": "Type",
+          "label": "Usé",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "expiration_date": {
+        "edit": {
+          "label": "Date d'expiration",
+          "description": "Si pas de date, le coupon n'expirera pas tant qu'il n'a pas été utilisé",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Expiration",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "comment": {
+        "edit": {
+          "label": "Commentaire",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Commentaire",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "max_usage": {
+        "edit": {
+          "label": "Nombre d'utilisation max",
+          "description": "Le nombre de fois où le coupon pourra être utilisé avant d'être désactivé (par défaut : 1)",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Utilisations max",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "usage_count": {
+        "edit": {
+          "label": "Nombre d'utilisation actuel",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": false
+        },
+        "list": {
+          "label": "Utilisations",
           "searchable": true,
           "sortable": true
         }
@@ -152,33 +165,47 @@
       "edit": [
         [
           {
-            "name": "label",
-            "size": 6
+            "name": "code",
+            "size": 4
           },
           {
-            "name": "value",
-            "size": 6
+            "name": "discount",
+            "size": 4
+          },
+          {
+            "name": "used",
+            "size": 4
           }
         ],
         [
           {
-            "name": "price",
-            "size": 6
+            "name": "expiration_date",
+            "size": 4
           },
           {
-            "name": "discount",
+            "name": "max_usage",
+            "size": 4
+          },
+          {
+            "name": "usage_count",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "comment",
             "size": 6
           }
         ]
       ],
-      "editRelations": [
-        "private_type"
-      ],
+      "editRelations": [],
       "list": [
-        "private_type",
-        "label",
-        "price",
-        "discount"
+        "code",
+        "max_usage",
+        "usage_count",
+        "expiration_date",
+        "used",
+        "comment"
       ]
     }
   },

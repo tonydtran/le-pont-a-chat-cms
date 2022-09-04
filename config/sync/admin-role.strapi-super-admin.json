@@ -73,13 +73,76 @@
     },
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "api::discount-coupon.discount-coupon",
+      "properties": {
+        "fields": [
+          "uuid",
+          "code",
+          "discount",
+          "used",
+          "expiration_date",
+          "comment",
+          "max_usage",
+          "usage_count"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::discount-coupon.discount-coupon",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::discount-coupon.discount-coupon",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::discount-coupon.discount-coupon",
+      "properties": {
+        "fields": [
+          "uuid",
+          "code",
+          "discount",
+          "used",
+          "expiration_date",
+          "comment",
+          "max_usage",
+          "usage_count"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::discount-coupon.discount-coupon",
+      "properties": {
+        "fields": [
+          "uuid",
+          "code",
+          "discount",
+          "used",
+          "expiration_date",
+          "comment",
+          "max_usage",
+          "usage_count"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "api::menu-item.menu-item",
       "properties": {
         "fields": [
           "name",
           "slug",
           "display_order",
-          "subMenu",
+          "sub_nav_type",
           "uuid"
         ],
         "locales": [
@@ -119,7 +182,7 @@
           "name",
           "slug",
           "display_order",
-          "subMenu",
+          "sub_nav_type",
           "uuid"
         ],
         "locales": [
@@ -137,7 +200,7 @@
           "name",
           "slug",
           "display_order",
-          "subMenu",
+          "sub_nav_type",
           "uuid"
         ],
         "locales": [
@@ -225,6 +288,168 @@
         "locales": [
           "fr",
           "en"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::order-item.order-item",
+      "properties": {
+        "fields": [
+          "uuid",
+          "product",
+          "options",
+          "total_price"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::order-item.order-item",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::order-item.order-item",
+      "properties": {
+        "fields": [
+          "uuid",
+          "product",
+          "options",
+          "total_price"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::order-item.order-item",
+      "properties": {
+        "fields": [
+          "uuid",
+          "product",
+          "options",
+          "total_price"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::order.order",
+      "properties": {
+        "fields": [
+          "uuid",
+          "firstname",
+          "lastname",
+          "status",
+          "items",
+          "shipping_address.address_name",
+          "shipping_address.firstname",
+          "shipping_address.lastname",
+          "shipping_address.address_line_1",
+          "shipping_address.address_line_2",
+          "shipping_address.city",
+          "shipping_address.zip_code",
+          "shipping_address.region_state_province",
+          "shipping_address.country",
+          "shipping_address.other",
+          "billing_address.address_name",
+          "billing_address.firstname",
+          "billing_address.lastname",
+          "billing_address.address_line_1",
+          "billing_address.address_line_2",
+          "billing_address.city",
+          "billing_address.zip_code",
+          "billing_address.region_state_province",
+          "billing_address.country",
+          "billing_address.other",
+          "total_price",
+          "coupon",
+          "reference"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::order.order",
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::order.order",
+      "properties": {
+        "fields": [
+          "uuid",
+          "firstname",
+          "lastname",
+          "status",
+          "items",
+          "shipping_address.address_name",
+          "shipping_address.firstname",
+          "shipping_address.lastname",
+          "shipping_address.address_line_1",
+          "shipping_address.address_line_2",
+          "shipping_address.city",
+          "shipping_address.zip_code",
+          "shipping_address.region_state_province",
+          "shipping_address.country",
+          "shipping_address.other",
+          "billing_address.address_name",
+          "billing_address.firstname",
+          "billing_address.lastname",
+          "billing_address.address_line_1",
+          "billing_address.address_line_2",
+          "billing_address.city",
+          "billing_address.zip_code",
+          "billing_address.region_state_province",
+          "billing_address.country",
+          "billing_address.other",
+          "total_price",
+          "coupon",
+          "reference"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::order.order",
+      "properties": {
+        "fields": [
+          "uuid",
+          "firstname",
+          "lastname",
+          "status",
+          "items",
+          "shipping_address.address_name",
+          "shipping_address.firstname",
+          "shipping_address.lastname",
+          "shipping_address.address_line_1",
+          "shipping_address.address_line_2",
+          "shipping_address.city",
+          "shipping_address.zip_code",
+          "shipping_address.region_state_province",
+          "shipping_address.country",
+          "shipping_address.other",
+          "billing_address.address_name",
+          "billing_address.firstname",
+          "billing_address.lastname",
+          "billing_address.address_line_1",
+          "billing_address.address_line_2",
+          "billing_address.city",
+          "billing_address.zip_code",
+          "billing_address.region_state_province",
+          "billing_address.country",
+          "billing_address.other",
+          "total_price",
+          "coupon",
+          "reference"
         ]
       },
       "conditions": []
