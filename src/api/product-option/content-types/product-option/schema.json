@@ -66,8 +66,7 @@
         "text",
         "number",
         "textarea"
-      ],
-      "default": "select"
+      ]
     }
   }
 }
