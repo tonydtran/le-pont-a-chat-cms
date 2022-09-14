@@ -2137,6 +2137,18 @@
           "target": "api::private-type.private-type",
           "private": true
         },
+        "image": {
+          "allowedTypes": [
+            "images"
+          ],
+          "type": "media",
+          "multiple": false,
+          "pluginOptions": {
+            "i18n": {
+              "localized": false
+            }
+          }
+        },
         "createdAt": {
           "type": "datetime"
         },
@@ -2265,6 +2277,18 @@
             "relation": "oneToOne",
             "target": "api::private-type.private-type",
             "private": true
+          },
+          "image": {
+            "allowedTypes": [
+              "images"
+            ],
+            "type": "media",
+            "multiple": false,
+            "pluginOptions": {
+              "i18n": {
+                "localized": false
+              }
+            }
           }
         },
         "kind": "collectionType"
@@ -2987,6 +3011,23 @@
           "target": "api::private-type.private-type",
           "private": true
         },
+        "input_type": {
+          "pluginOptions": {
+            "i18n": {
+              "localized": false
+            }
+          },
+          "type": "enumeration",
+          "enum": [
+            "radio",
+            "select",
+            "slider",
+            "checkbox",
+            "text",
+            "number",
+            "textarea"
+          ]
+        },
         "createdAt": {
           "type": "datetime"
         },
@@ -3087,6 +3128,23 @@
             "relation": "oneToOne",
             "target": "api::private-type.private-type",
             "private": true
+          },
+          "input_type": {
+            "pluginOptions": {
+              "i18n": {
+                "localized": false
+              }
+            },
+            "type": "enumeration",
+            "enum": [
+              "radio",
+              "select",
+              "slider",
+              "checkbox",
+              "text",
+              "number",
+              "textarea"
+            ]
           }
         },
         "kind": "collectionType"

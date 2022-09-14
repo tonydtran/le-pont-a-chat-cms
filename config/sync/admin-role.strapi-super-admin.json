@@ -221,7 +221,8 @@
           "price",
           "private_description",
           "discount",
-          "private_type"
+          "private_type",
+          "image"
         ],
         "locales": [
           "fr",
@@ -263,7 +264,8 @@
           "price",
           "private_description",
           "discount",
-          "private_type"
+          "private_type",
+          "image"
         ],
         "locales": [
           "fr",
@@ -283,7 +285,8 @@
           "price",
           "private_description",
           "discount",
-          "private_type"
+          "private_type",
+          "image"
         ],
         "locales": [
           "fr",
@@ -508,7 +511,8 @@
           "label",
           "description",
           "option_values",
-          "private_type"
+          "private_type",
+          "input_type"
         ],
         "locales": [
           "fr",
@@ -548,7 +552,8 @@
           "label",
           "description",
           "option_values",
-          "private_type"
+          "private_type",
+          "input_type"
         ],
         "locales": [
           "fr",
@@ -566,7 +571,8 @@
           "label",
           "description",
           "option_values",
-          "private_type"
+          "private_type",
+          "input_type"
         ],
         "locales": [
           "fr",

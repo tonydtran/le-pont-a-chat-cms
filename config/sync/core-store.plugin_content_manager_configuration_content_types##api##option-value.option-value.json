@@ -119,6 +119,20 @@
           "sortable": true
         }
       },
+      "image": {
+        "edit": {
+          "label": "Image",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "image",
+          "searchable": false,
+          "sortable": false
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -167,6 +181,12 @@
           },
           {
             "name": "discount",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "image",
             "size": 6
           }
         ]

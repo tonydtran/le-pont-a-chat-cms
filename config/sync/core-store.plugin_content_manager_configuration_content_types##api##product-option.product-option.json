@@ -92,6 +92,20 @@
           "sortable": true
         }
       },
+      "input_type": {
+        "edit": {
+          "label": "Type de saisie",
+          "description": "Définit le type de saisie lors de la selection des options (liste déroulante, case à cocher, etc)",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "input_type",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -132,6 +146,12 @@
         [
           {
             "name": "description",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "input_type",
             "size": 6
           }
         ]
