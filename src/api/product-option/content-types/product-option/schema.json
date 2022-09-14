@@ -50,6 +50,24 @@
       "relation": "oneToOne",
       "target": "api::private-type.private-type",
       "private": true
+    },
+    "input_type": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "radio",
+        "select",
+        "slider",
+        "checkbox",
+        "text",
+        "number",
+        "textarea"
+      ],
+      "default": "select"
     }
   }
 }

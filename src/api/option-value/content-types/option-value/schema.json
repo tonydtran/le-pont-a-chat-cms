@@ -78,6 +78,18 @@
       "relation": "oneToOne",
       "target": "api::private-type.private-type",
       "private": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
     }
   }
 }
