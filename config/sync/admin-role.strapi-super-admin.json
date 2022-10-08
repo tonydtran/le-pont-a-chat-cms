@@ -139,6 +139,79 @@
     },
     {
       "action": "plugin::content-manager.explorer.create",
+      "subject": "api::home.home",
+      "properties": {
+        "fields": [
+          "cover",
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "locales": [
+          "fr",
+          "en"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::home.home",
+      "properties": {
+        "locales": [
+          "fr",
+          "en"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.publish",
+      "subject": "api::home.home",
+      "properties": {
+        "locales": [
+          "fr",
+          "en"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::home.home",
+      "properties": {
+        "fields": [
+          "cover",
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "locales": [
+          "fr",
+          "en"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::home.home",
+      "properties": {
+        "fields": [
+          "cover",
+          "title",
+          "subtitle",
+          "content"
+        ],
+        "locales": [
+          "fr",
+          "en"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
       "subject": "api::menu-item.menu-item",
       "properties": {
         "fields": [
