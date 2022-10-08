@@ -13,7 +13,8 @@
           "uuid",
           "parent",
           "display_order",
-          "children"
+          "children",
+          "image"
         ],
         "locales": [
           "fr",
@@ -43,7 +44,8 @@
           "uuid",
           "parent",
           "display_order",
-          "children"
+          "children",
+          "image"
         ],
         "locales": [
           "fr",
@@ -62,7 +64,8 @@
           "uuid",
           "parent",
           "display_order",
-          "children"
+          "children",
+          "image"
         ],
         "locales": [
           "fr",
@@ -222,7 +225,8 @@
           "private_description",
           "discount",
           "private_type",
-          "image"
+          "image",
+          "discounted_price"
         ],
         "locales": [
           "fr",
@@ -265,7 +269,8 @@
           "private_description",
           "discount",
           "private_type",
-          "image"
+          "image",
+          "discounted_price"
         ],
         "locales": [
           "fr",
@@ -286,7 +291,8 @@
           "private_description",
           "discount",
           "private_type",
-          "image"
+          "image",
+          "discounted_price"
         ],
         "locales": [
           "fr",
@@ -595,7 +601,8 @@
           "product_options",
           "description",
           "discount",
-          "thumbnail"
+          "thumbnail",
+          "discounted_price"
         ],
         "locales": [
           "fr",
@@ -640,7 +647,8 @@
           "product_options",
           "description",
           "discount",
-          "thumbnail"
+          "thumbnail",
+          "discounted_price"
         ],
         "locales": [
           "fr",
@@ -663,7 +671,8 @@
           "product_options",
           "description",
           "discount",
-          "thumbnail"
+          "thumbnail",
+          "discounted_price"
         ],
         "locales": [
           "fr",

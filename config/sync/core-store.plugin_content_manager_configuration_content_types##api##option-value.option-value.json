@@ -133,6 +133,20 @@
           "sortable": false
         }
       },
+      "discounted_price": {
+        "edit": {
+          "label": "Prix remisé",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": false
+        },
+        "list": {
+          "label": "discounted_price",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "createdAt",
@@ -177,11 +191,15 @@
         [
           {
             "name": "price",
-            "size": 6
+            "size": 4
           },
           {
             "name": "discount",
-            "size": 6
+            "size": 4
+          },
+          {
+            "name": "discounted_price",
+            "size": 4
           }
         ],
         [

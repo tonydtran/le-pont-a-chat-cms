@@ -137,8 +137,8 @@
       "discount": {
         "edit": {
           "label": "Remise (en %)",
-          "description": "Remise appliquée",
-          "placeholder": "",
+          "description": "Remise appliquée sur le prix initial du produit sans option",
+          "placeholder": "Ex : 10 (ce qui fera -10% sur le cout du produit)",
           "visible": true,
           "editable": true
         },
@@ -160,6 +160,20 @@
           "label": "thumbnail",
           "searchable": false,
           "sortable": false
+        }
+      },
+      "discounted_price": {
+        "edit": {
+          "label": "Prix remisé",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": false
+        },
+        "list": {
+          "label": "discounted_price",
+          "searchable": true,
+          "sortable": true
         }
       },
       "createdAt": {
@@ -212,11 +226,15 @@
         [
           {
             "name": "price",
-            "size": 6
+            "size": 4
           },
           {
             "name": "discount",
-            "size": 6
+            "size": 4
+          },
+          {
+            "name": "discounted_price",
+            "size": 4
           }
         ],
         [

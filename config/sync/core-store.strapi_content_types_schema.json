@@ -1599,6 +1599,18 @@
           "relation": "oneToMany",
           "target": "api::category.category"
         },
+        "image": {
+          "allowedTypes": [
+            "images"
+          ],
+          "type": "media",
+          "multiple": false,
+          "pluginOptions": {
+            "i18n": {
+              "localized": false
+            }
+          }
+        },
         "createdAt": {
           "type": "datetime"
         },
@@ -1703,6 +1715,18 @@
             "type": "relation",
             "relation": "oneToMany",
             "target": "api::category.category"
+          },
+          "image": {
+            "allowedTypes": [
+              "images"
+            ],
+            "type": "media",
+            "multiple": false,
+            "pluginOptions": {
+              "i18n": {
+                "localized": false
+              }
+            }
           }
         },
         "kind": "collectionType"
@@ -2138,16 +2162,25 @@
           "private": true
         },
         "image": {
+          "type": "media",
+          "multiple": false,
+          "required": false,
           "allowedTypes": [
             "images"
           ],
-          "type": "media",
-          "multiple": false,
           "pluginOptions": {
             "i18n": {
               "localized": false
             }
           }
+        },
+        "discounted_price": {
+          "pluginOptions": {
+            "i18n": {
+              "localized": false
+            }
+          },
+          "type": "decimal"
         },
         "createdAt": {
           "type": "datetime"
@@ -2279,16 +2312,25 @@
             "private": true
           },
           "image": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
             "allowedTypes": [
               "images"
             ],
-            "type": "media",
-            "multiple": false,
             "pluginOptions": {
               "i18n": {
                 "localized": false
               }
             }
+          },
+          "discounted_price": {
+            "pluginOptions": {
+              "i18n": {
+                "localized": false
+              }
+            },
+            "type": "decimal"
           }
         },
         "kind": "collectionType"
@@ -2776,17 +2818,25 @@
           "max": 100
         },
         "thumbnail": {
+          "type": "media",
+          "multiple": false,
+          "required": true,
           "allowedTypes": [
             "images"
           ],
-          "type": "media",
-          "multiple": false,
+          "pluginOptions": {
+            "i18n": {
+              "localized": false
+            }
+          }
+        },
+        "discounted_price": {
           "pluginOptions": {
             "i18n": {
               "localized": false
             }
           },
-          "required": true
+          "type": "decimal"
         },
         "createdAt": {
           "type": "datetime"
@@ -2934,17 +2984,25 @@
             "max": 100
           },
           "thumbnail": {
+            "type": "media",
+            "multiple": false,
+            "required": true,
             "allowedTypes": [
               "images"
             ],
-            "type": "media",
-            "multiple": false,
+            "pluginOptions": {
+              "i18n": {
+                "localized": false
+              }
+            }
+          },
+          "discounted_price": {
             "pluginOptions": {
               "i18n": {
                 "localized": false
               }
             },
-            "required": true
+            "type": "decimal"
           }
         },
         "kind": "collectionType"
