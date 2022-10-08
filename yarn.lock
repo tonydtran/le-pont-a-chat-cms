@@ -9865,6 +9865,11 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
+round-to-decimal@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/round-to-decimal/-/round-to-decimal-1.0.3.tgz#5561e902a489af64c720951062c9b84e8d9e8d4f"
+  integrity sha512-9G0qu3qF6hXdqtpeEZSOV7ov4jLFTzh/BIG23qlKRMDWXbMzyuHFAeuYz9lbG/Dumlvu2XWG7fuo3VYOgaM7sA==
+
 run-async@^2.4.0:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/run-async/-/run-async-2.4.1.tgz#8440eccf99ea3e70bd409d49aab88e10c189a455"

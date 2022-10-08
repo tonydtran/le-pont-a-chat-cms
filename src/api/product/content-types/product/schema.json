@@ -96,17 +96,25 @@
       "max": 100
     },
     "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "discounted_price": {
       "pluginOptions": {
         "i18n": {
           "localized": false
         }
       },
-      "required": true
+      "type": "decimal"
     }
   }
 }
