@@ -246,6 +246,20 @@
           "sortable": true
         }
       },
+      "birthdate": {
+        "edit": {
+          "label": "Date de naissance",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "birthdate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
       "createdAt": {
         "edit": {
           "label": "CreatedAt",
@@ -301,6 +315,10 @@
           {
             "name": "password",
             "size": 6
+          },
+          {
+            "name": "birthdate",
+            "size": 4
           }
         ],
         [

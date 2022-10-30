@@ -93,6 +93,9 @@
     "note": {
       "type": "string",
       "private": true
+    },
+    "birthdate": {
+      "type": "date"
     }
   }
 }

@@ -16,6 +16,9 @@
       "action": "api::discount-coupon.discount-coupon.findOne"
     },
     {
+      "action": "api::home.home.find"
+    },
+    {
       "action": "api::menu-item.menu-item.find"
     },
     {
@@ -28,10 +31,16 @@
       "action": "api::option-value.option-value.findOne"
     },
     {
+      "action": "api::order-item.order-item.create"
+    },
+    {
       "action": "api::order-item.order-item.find"
     },
     {
       "action": "api::order-item.order-item.findOne"
+    },
+    {
+      "action": "api::order.order.create"
     },
     {
       "action": "api::order.order.find"
@@ -52,16 +61,34 @@
       "action": "api::product.product.findOne"
     },
     {
+      "action": "plugin::email.email.send"
+    },
+    {
       "action": "plugin::users-permissions.auth.callback"
+    },
+    {
+      "action": "plugin::users-permissions.auth.changePassword"
     },
     {
       "action": "plugin::users-permissions.auth.connect"
     },
     {
+      "action": "plugin::users-permissions.auth.emailConfirmation"
+    },
+    {
+      "action": "plugin::users-permissions.auth.forgotPassword"
+    },
+    {
       "action": "plugin::users-permissions.auth.register"
     },
     {
-      "action": "plugin::users-permissions.user.me"
+      "action": "plugin::users-permissions.auth.resetPassword"
+    },
+    {
+      "action": "plugin::users-permissions.auth.sendEmailConfirmation"
+    },
+    {
+      "action": "plugin::users-permissions.permissions.getPermissions"
     }
   ]
 }

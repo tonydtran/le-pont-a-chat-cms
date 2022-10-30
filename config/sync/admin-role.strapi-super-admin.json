@@ -942,7 +942,8 @@
           "billing_address.other",
           "orders",
           "same_billing_address",
-          "note"
+          "note",
+          "birthdate"
         ]
       },
       "conditions": []
@@ -991,7 +992,8 @@
           "billing_address.other",
           "orders",
           "same_billing_address",
-          "note"
+          "note",
+          "birthdate"
         ]
       },
       "conditions": []
@@ -1034,7 +1036,8 @@
           "billing_address.other",
           "orders",
           "same_billing_address",
-          "note"
+          "note",
+          "birthdate"
         ]
       },
       "conditions": []
