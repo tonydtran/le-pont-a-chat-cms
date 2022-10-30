@@ -7,7 +7,7 @@
       "filterable": true,
       "searchable": true,
       "pageSize": 10,
-      "mainField": "username",
+      "mainField": "lastname",
       "defaultSortBy": "username",
       "defaultSortOrder": "ASC"
     },
@@ -22,7 +22,7 @@
       },
       "username": {
         "edit": {
-          "label": "Username",
+          "label": "Identifiant",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -64,7 +64,7 @@
       },
       "password": {
         "edit": {
-          "label": "Password",
+          "label": "Mot de passe",
           "description": "",
           "placeholder": "",
           "visible": true,
@@ -106,28 +106,28 @@
       },
       "confirmed": {
         "edit": {
-          "label": "Confirmed",
+          "label": "Confirmé",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "Confirmed",
+          "label": "Confirmé",
           "searchable": true,
           "sortable": true
         }
       },
       "blocked": {
         "edit": {
-          "label": "Blocked",
+          "label": "Bloqué",
           "description": "",
           "placeholder": "",
           "visible": true,
           "editable": true
         },
         "list": {
-          "label": "Blocked",
+          "label": "Bloqué",
           "searchable": true,
           "sortable": true
         }
@@ -143,6 +143,105 @@
         },
         "list": {
           "label": "Role",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "firstname": {
+        "edit": {
+          "label": "Prenom",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Prénom",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "lastname": {
+        "edit": {
+          "label": "Nom",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Nom",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "shipping_address": {
+        "edit": {
+          "label": "Adresse de livraison",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "shipping_address",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "billing_address": {
+        "edit": {
+          "label": "Adresse de facturation",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "billing_address",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "orders": {
+        "edit": {
+          "label": "Commandes",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "uuid"
+        },
+        "list": {
+          "label": "orders",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "same_billing_address": {
+        "edit": {
+          "label": "Même adresse de facturation et livraison",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "same_billing_address",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "note": {
+        "edit": {
+          "label": "Note",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "Note",
           "searchable": true,
           "sortable": true
         }
@@ -177,23 +276,24 @@
       }
     },
     "layouts": {
-      "list": [
-        "id",
-        "username",
-        "email",
-        "confirmed"
-      ],
-      "editRelations": [
-        "role"
-      ],
       "edit": [
         [
           {
-            "name": "username",
+            "name": "firstname",
             "size": 6
           },
           {
+            "name": "lastname",
+            "size": 6
+          }
+        ],
+        [
+          {
             "name": "email",
+            "size": 6
+          },
+          {
+            "name": "username",
             "size": 6
           }
         ],
@@ -201,18 +301,53 @@
           {
             "name": "password",
             "size": 6
-          },
+          }
+        ],
+        [
           {
             "name": "confirmed",
+            "size": 4
+          },
+          {
+            "name": "blocked",
             "size": 4
           }
         ],
         [
           {
-            "name": "blocked",
+            "name": "shipping_address",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "same_billing_address",
             "size": 4
           }
+        ],
+        [
+          {
+            "name": "billing_address",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "note",
+            "size": 12
+          }
         ]
+      ],
+      "editRelations": [
+        "orders",
+        "role"
+      ],
+      "list": [
+        "lastname",
+        "firstname",
+        "confirmed",
+        "blocked",
+        "note"
       ]
     }
   },

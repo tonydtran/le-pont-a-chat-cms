@@ -1421,6 +1421,37 @@
           "inversedBy": "users",
           "configurable": false
         },
+        "firstname": {
+          "type": "string",
+          "required": true
+        },
+        "lastname": {
+          "type": "string",
+          "required": true
+        },
+        "shipping_address": {
+          "type": "component",
+          "repeatable": false,
+          "component": "address.customer-address"
+        },
+        "billing_address": {
+          "type": "component",
+          "repeatable": false,
+          "component": "address.customer-address"
+        },
+        "orders": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::order.order"
+        },
+        "same_billing_address": {
+          "type": "boolean",
+          "default": false
+        },
+        "note": {
+          "type": "string",
+          "private": true
+        },
         "createdAt": {
           "type": "datetime"
         },
@@ -1462,6 +1493,7 @@
         }
       },
       "kind": "collectionType",
+      "__filename__": "schema.json",
       "__schema__": {
         "collectionName": "up_users",
         "info": {
@@ -1525,6 +1557,37 @@
             "target": "plugin::users-permissions.role",
             "inversedBy": "users",
             "configurable": false
+          },
+          "firstname": {
+            "type": "string",
+            "required": true
+          },
+          "lastname": {
+            "type": "string",
+            "required": true
+          },
+          "shipping_address": {
+            "type": "component",
+            "repeatable": false,
+            "component": "address.customer-address"
+          },
+          "billing_address": {
+            "type": "component",
+            "repeatable": false,
+            "component": "address.customer-address"
+          },
+          "orders": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::order.order"
+          },
+          "same_billing_address": {
+            "type": "boolean",
+            "default": false
+          },
+          "note": {
+            "type": "string",
+            "private": true
           }
         },
         "kind": "collectionType"
