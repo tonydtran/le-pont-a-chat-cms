@@ -150,6 +150,12 @@
       }
     },
     "layouts": {
+      "list": [
+        "name",
+        "display_order",
+        "parent",
+        "children"
+      ],
       "edit": [
         [
           {
@@ -167,18 +173,18 @@
           {
             "name": "image",
             "size": 6
+          },
+          {
+            "name": "parent",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "children",
+            "size": 6
           }
         ]
-      ],
-      "editRelations": [
-        "parent",
-        "children"
-      ],
-      "list": [
-        "name",
-        "display_order",
-        "parent",
-        "children"
       ]
     }
   },

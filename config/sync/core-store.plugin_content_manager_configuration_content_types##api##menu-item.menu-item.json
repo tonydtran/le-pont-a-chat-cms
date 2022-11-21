@@ -120,6 +120,11 @@
       }
     },
     "layouts": {
+      "list": [
+        "name",
+        "display_order",
+        "sub_nav_type"
+      ],
       "edit": [
         [
           {
@@ -137,12 +142,6 @@
             "size": 6
           }
         ]
-      ],
-      "editRelations": [],
-      "list": [
-        "name",
-        "display_order",
-        "sub_nav_type"
       ]
     }
   },

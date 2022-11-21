@@ -136,6 +136,12 @@
       }
     },
     "layouts": {
+      "list": [
+        "label",
+        "description",
+        "private_type",
+        "option_values"
+      ],
       "edit": [
         [
           {
@@ -153,18 +159,18 @@
           {
             "name": "input_type",
             "size": 6
+          },
+          {
+            "name": "option_values",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "private_type",
+            "size": 6
           }
         ]
-      ],
-      "editRelations": [
-        "option_values",
-        "private_type"
-      ],
-      "list": [
-        "label",
-        "description",
-        "private_type",
-        "option_values"
       ]
     }
   },

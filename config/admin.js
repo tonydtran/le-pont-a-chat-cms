@@ -5,4 +5,7 @@ module.exports = ({ env }) => ({
   watchIgnoreFiles: [
     '**/config/sync/**',
   ],
+  apiToken: {
+    salt: env('API_TOKEN_SALT'),
+  }
 });

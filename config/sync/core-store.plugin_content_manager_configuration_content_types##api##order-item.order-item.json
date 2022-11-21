@@ -108,23 +108,29 @@
       }
     },
     "layouts": {
-      "edit": [
-        [
-          {
-            "name": "total_price",
-            "size": 4
-          }
-        ]
-      ],
-      "editRelations": [
-        "product",
-        "options"
-      ],
       "list": [
         "id",
         "product",
         "options",
         "total_price"
+      ],
+      "edit": [
+        [
+          {
+            "name": "total_price",
+            "size": 4
+          },
+          {
+            "name": "product",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "options",
+            "size": 6
+          }
+        ]
       ]
     }
   },

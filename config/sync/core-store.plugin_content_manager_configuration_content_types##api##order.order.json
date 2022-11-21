@@ -192,6 +192,12 @@
       }
     },
     "layouts": {
+      "list": [
+        "lastname",
+        "firstname",
+        "status",
+        "shipping_address"
+      ],
       "edit": [
         [
           {
@@ -224,17 +230,17 @@
             "name": "billing_address",
             "size": 12
           }
+        ],
+        [
+          {
+            "name": "items",
+            "size": 6
+          },
+          {
+            "name": "coupon",
+            "size": 6
+          }
         ]
-      ],
-      "editRelations": [
-        "items",
-        "coupon"
-      ],
-      "list": [
-        "lastname",
-        "firstname",
-        "status",
-        "shipping_address"
       ]
     }
   },

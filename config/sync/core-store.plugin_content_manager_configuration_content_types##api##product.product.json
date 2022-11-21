@@ -206,6 +206,13 @@
       }
     },
     "layouts": {
+      "list": [
+        "name",
+        "categories",
+        "product_options",
+        "price",
+        "discount"
+      ],
       "edit": [
         [
           {
@@ -242,18 +249,17 @@
             "name": "assets",
             "size": 12
           }
+        ],
+        [
+          {
+            "name": "categories",
+            "size": 6
+          },
+          {
+            "name": "product_options",
+            "size": 6
+          }
         ]
-      ],
-      "editRelations": [
-        "categories",
-        "product_options"
-      ],
-      "list": [
-        "name",
-        "categories",
-        "product_options",
-        "price",
-        "discount"
       ]
     }
   },

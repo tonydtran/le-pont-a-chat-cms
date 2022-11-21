@@ -162,6 +162,14 @@
       }
     },
     "layouts": {
+      "list": [
+        "code",
+        "max_usage",
+        "usage_count",
+        "expiration_date",
+        "used",
+        "comment"
+      ],
       "edit": [
         [
           {
@@ -197,15 +205,6 @@
             "size": 6
           }
         ]
-      ],
-      "editRelations": [],
-      "list": [
-        "code",
-        "max_usage",
-        "usage_count",
-        "expiration_date",
-        "used",
-        "comment"
       ]
     }
   },

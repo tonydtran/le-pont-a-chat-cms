@@ -177,6 +177,12 @@
       }
     },
     "layouts": {
+      "list": [
+        "private_type",
+        "label",
+        "price",
+        "discount"
+      ],
       "edit": [
         [
           {
@@ -206,17 +212,12 @@
           {
             "name": "image",
             "size": 6
+          },
+          {
+            "name": "private_type",
+            "size": 6
           }
         ]
-      ],
-      "editRelations": [
-        "private_type"
-      ],
-      "list": [
-        "private_type",
-        "label",
-        "price",
-        "discount"
       ]
     }
   },
