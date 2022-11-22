@@ -304,14 +304,6 @@
       }
     },
     "layouts": {
-      "list": [
-        "lastname",
-        "firstname",
-        "confirmed",
-        "blocked",
-        "note",
-        "role"
-      ],
       "edit": [
         [
           {
@@ -377,12 +369,16 @@
           {
             "name": "orders",
             "size": 6
-          },
-          {
-            "name": "role",
-            "size": 6
           }
         ]
+      ],
+      "list": [
+        "lastname",
+        "firstname",
+        "confirmed",
+        "blocked",
+        "note",
+        "role"
       ]
     }
   },
