@@ -25,6 +25,12 @@ module.exports = {
         data.params.data.uuid = uuid();
         const { firstname, lastname } = data.params.data
         data.params.data.username = `${replaceSpecialCharacters(firstname.trim())}_${replaceSpecialCharacters(lastname.trim())}_${(Math.random() + 1).toString(36).substring(8)}`
+      },
+      async beforeUpdate (data) {
+        const { same_billing_address } = data.params.data
+        if (same_billing_address) {
+          data.params.data.billing_address = null
+        }
       }
     })
   },
