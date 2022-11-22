@@ -4,10 +4,94 @@
   "type": "authenticated",
   "permissions": [
     {
+      "action": "api::category.category.find"
+    },
+    {
+      "action": "api::category.category.findOne"
+    },
+    {
+      "action": "api::discount-coupon.discount-coupon.find"
+    },
+    {
+      "action": "api::discount-coupon.discount-coupon.findOne"
+    },
+    {
+      "action": "api::home.home.find"
+    },
+    {
+      "action": "api::menu-item.menu-item.find"
+    },
+    {
+      "action": "api::menu-item.menu-item.findOne"
+    },
+    {
+      "action": "api::option-value.option-value.find"
+    },
+    {
+      "action": "api::option-value.option-value.findOne"
+    },
+    {
+      "action": "api::order-item.order-item.find"
+    },
+    {
+      "action": "api::order-item.order-item.findOne"
+    },
+    {
+      "action": "api::order.order.create"
+    },
+    {
+      "action": "api::order.order.find"
+    },
+    {
+      "action": "api::order.order.findOne"
+    },
+    {
+      "action": "api::product-option.product-option.find"
+    },
+    {
+      "action": "api::product-option.product-option.findOne"
+    },
+    {
+      "action": "api::product.product.find"
+    },
+    {
+      "action": "api::product.product.findOne"
+    },
+    {
+      "action": "plugin::email.email.send"
+    },
+    {
+      "action": "plugin::i18n.locales.listLocales"
+    },
+    {
+      "action": "plugin::users-permissions.auth.callback"
+    },
+    {
+      "action": "plugin::users-permissions.auth.changePassword"
+    },
+    {
       "action": "plugin::users-permissions.auth.connect"
     },
     {
+      "action": "plugin::users-permissions.auth.emailConfirmation"
+    },
+    {
+      "action": "plugin::users-permissions.auth.forgotPassword"
+    },
+    {
+      "action": "plugin::users-permissions.auth.register"
+    },
+    {
+      "action": "plugin::users-permissions.auth.resetPassword"
+    },
+    {
+      "action": "plugin::users-permissions.auth.sendEmailConfirmation"
+    },
+    {
       "action": "plugin::users-permissions.user.me"
+    },
+    {
+      "action": "plugin::users-permissions.user.update"
     }
   ]
 }
