@@ -16,9 +16,6 @@
       "action": "api::discount-coupon.discount-coupon.findOne"
     },
     {
-      "action": "api::home.home.find"
-    },
-    {
       "action": "api::menu-item.menu-item.find"
     },
     {

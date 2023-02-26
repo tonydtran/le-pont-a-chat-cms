@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * home router
+ * featured router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::home.home');
+module.exports = createCoreRouter('api::featured.featured');

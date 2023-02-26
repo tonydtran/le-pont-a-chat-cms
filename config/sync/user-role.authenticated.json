@@ -16,9 +16,6 @@
       "action": "api::discount-coupon.discount-coupon.findOne"
     },
     {
-      "action": "api::home.home.find"
-    },
-    {
       "action": "api::menu-item.menu-item.find"
     },
     {
@@ -92,6 +89,9 @@
     },
     {
       "action": "plugin::users-permissions.user.update"
+    },
+    {
+      "action": "plugin::users-permissions.user.updateMe"
     }
   ]
 }
